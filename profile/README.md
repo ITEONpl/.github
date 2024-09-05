@@ -1,133 +1,80 @@
-# Welcome to ITEON.PL! 👋
+# Welcome to ITEON.PL! 👋 | Witaj w ITEON.PL! 👋
 
-We are ITEON.PL, a forward-thinking software development company led by Leszek Szpunar, based in Warsaw, Poland. Since 2009, we've been helping businesses grow through innovative, scalable, and efficient digital solutions.
+## English Version 🇬🇧
 
-## 🌟 What We Do
-At ITEON.PL, we combine technical excellence with business insight to deliver powerful software that solves real-world problems. Here’s a snapshot of what we specialize in:
+We are **ITEON.PL**, a dynamic software development company led by **Leszek Szpunar**, based in Warsaw, Poland. Since 2009, we’ve been helping businesses thrive by delivering innovative, scalable, and efficient digital solutions. Our focus is on building systems that combine technical excellence with strategic business insights.
 
-### 🚀 **Building Modern Software Solutions**
-We create applications that are **scalable** and **resilient**, whether it's a simple web app or a complex, distributed system using microservices. We rely on:
+### 🌟 What We Do
+At ITEON.PL, we create high-performance applications tailored to solve real-world business problems. Our key areas of expertise include:
 
-- **.NET Core** for building the backbone of our solutions.
-- **React** and **Next.js** for fast, interactive, and beautiful user interfaces.
-- **Tailwind CSS** to ensure our frontends are both responsive and elegantly designed.
+- **Backend Development**: Using **.NET Core** to create robust and scalable backend systems.
+- **Frontend Engineering**: Developing beautiful and interactive user interfaces with **React**, **Next.js**, and **Tailwind CSS**.
+- **Microservices**: Designing distributed systems using **MassTransit**, **RabbitMQ**, and **Kafka**.
+- **Architecture**: Leveraging **CQRS**, **Event Sourcing**, and **Clean Architecture** to ensure our systems are efficient and maintainable.
+- **Cloud & DevOps**: We deploy cloud-native applications using **Kubernetes**, **Docker**, **Azure**, **AWS**, and infrastructure as code tools like **Terraform**.
 
-### ⚙️ **Microservices & Distributed Systems**
-We help businesses transition from monolithic architectures to **microservices**, giving them more flexibility and scalability. Our expertise includes:
+### 💡 Our Core Competencies
+- **Microservices & Messaging**: We help businesses shift from monolithic systems to modern, scalable microservices.
+- **API Development**: Building secure, fast, and flexible APIs using **RESTful** principles and **GraphQL**.
+- **Data & Monitoring**: Using **ElasticSearch**, **Redis**, **Prometheus**, and **Grafana** for data handling, caching, and monitoring system health.
+- **AI/ML**: Exploring Artificial Intelligence and Machine Learning to help clients gain deeper insights and enhance decision-making.
 
-- **MassTransit** and **RabbitMQ** for messaging and event-driven systems.
-- **Outbox pattern** to ensure reliable message delivery.
-- **CQRS** (Command Query Responsibility Segregation) and **Event Sourcing** to optimize performance and scalability.
-  
-### ☁️ **Cloud and Containerization**
-Our team builds cloud-native applications, deploying them seamlessly using:
+### 📊 GitHub Stats:
+![ITEON's GitHub Stats](https://github-readme-stats.vercel.app/api?username=ITEONpl&show_icons=true&theme=radical)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ITEONpl&layout=compact&theme=radical)](https://github.com/ITEONpl/github-readme-stats)
 
-- **Kubernetes** for orchestration and **Docker** for containerization.
-- Expertise in **Azure** and **AWS** for cloud infrastructure.
-- **Terraform** to manage infrastructure as code, ensuring scalable, secure deployments.
+### 🔗 Find Us Here:
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/leszekszpunar/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ITEONpl)
 
-### 🛠️ **Architectural Excellence**
-We ensure that our software is built to last by following the best design principles:
-
-- **Clean Architecture** and **Domain-Driven Design** (DDD) to structure our applications in a way that aligns with business goals.
-- **SOLID principles** to maintain flexibility and make the codebase easy to maintain and extend.
-- **TDD** (Test-Driven Development) to ensure our solutions are reliable and bug-free from the start.
-
-### 🔒 **Secure and Fast APIs**
-We design and maintain APIs that are fast, secure, and easy to integrate:
-
-- **RESTful APIs** for simple, scalable communication between services.
-- **GraphQL** for more flexible, efficient data queries.
-- **OAuth** and **OpenID Connect** for secure authentication and authorization.
-- Real-time communication using **WebSockets**.
-
-### 🔍 **Data and Monitoring**
-For data-heavy applications, we leverage:
-
-- **ElasticSearch** for fast and flexible search and analytics.
-- **Redis** for caching and in-memory data store needs.
-- **Prometheus** and **Grafana** to monitor system health and track key metrics.
-
-### 🤖 **AI and Machine Learning**
-We explore **AI/ML** technologies to enhance decision-making and automate processes, allowing our clients to gain deeper insights and improve efficiency.
-
-## 🔗 Our Approach
-We believe in creating **modular, testable, and maintainable** software that can evolve with your business. By adhering to **CI/CD** practices and following **Conventional Commits** and **Semantic Versioning**, we ensure that each release is predictable and easy to integrate.
-
-## 🤝 Let's Work Together
-If you're looking for a partner that understands both **business challenges** and **technical complexities**, we’re here to help! We work closely with our clients to deliver solutions that not only meet their current needs but also scale for future growth.
+### 🚀 Let's Work Together!
+We work closely with our clients to understand both the **business challenges** and **technical requirements**. Whether you need a tailored software solution, microservices architecture, or cloud deployment, we are here to help. Contact us today to explore how we can work together!
 
 - 📧 Email: info@iteon.pl
 - 🌍 Website: [iteon.pl](http://iteon.pl)
 - 🏢 Address: ul. Szamocka 12/136, 01-748 Warsaw, Poland
 
-Thanks for visiting, and we look forward to building something amazing together! 🚀
+### 📊 GitHub Stats:
+
+![ITEON's GitHub Stats](https://github-readme-stats.vercel.app/api?username=ITEONpl&show_icons=true&theme=radical)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ITEONpl&layout=compact&theme=radical)](https://github.com/ITEONpl/github-readme-stats)
+
+### 🏆 GitHub Trophies:
+
+[![trophy](https://github-profile-trophy.vercel.app/?username=ITEONpl&theme=onedark)](https://github.com/ITEONpl/github-profile-trophy)
 
 ---
 
-# Witaj w ITEON.PL! 👋
+## Wersja Polska 🇵🇱
 
-Cieszymy się, że nas odwiedzasz!  
-ITEON.PL, zarządzane przez Leszka Szpunara, to dynamiczna firma zajmująca się tworzeniem oprogramowania, z siedzibą w Warszawie. Od 2009 roku pomagamy firmom przekształcać pomysły w rzeczywistość poprzez innowacyjne, skalowalne i efektywne rozwiązania cyfrowe.
+Jesteśmy firmą **ITEON.PL**, dynamicznie rozwijającą się firmą programistyczną, zarządzaną przez **Leszka Szpunara** i mającą siedzibę w Warszawie. Od 2009 roku wspieramy firmy w rozwoju poprzez dostarczanie innowacyjnych, skalowalnych i wydajnych rozwiązań cyfrowych. Skupiamy się na budowaniu systemów, które łączą doskonałość techniczną z wglądem w potrzeby biznesowe.
 
-## 🌟 Czym się zajmujemy
-W ITEON.PL łączymy doskonałość techniczną z wglądem w potrzeby biznesowe, dostarczając wydajne oprogramowanie, które rozwiązuje realne problemy. Oto nasze główne obszary działalności:
+### 🌟 Czym się zajmujemy
+W ITEON.PL tworzymy aplikacje o wysokiej wydajności, dostosowane do rozwiązywania rzeczywistych problemów biznesowych. Nasze główne obszary działalności to:
 
-### 🚀 **Tworzenie nowoczesnych rozwiązań programistycznych**
-Budujemy aplikacje, które są **skalowalne** i **odporne** na zmiany, niezależnie od tego, czy chodzi o prostą aplikację webową, czy złożony system rozproszony oparty na mikroserwisach. Nasze kluczowe technologie to:
+- **Backend Development**: Tworzenie solidnych i skalowalnych systemów backendowych przy użyciu **.NET Core**.
+- **Frontend Engineering**: Projektowanie pięknych i interaktywnych interfejsów użytkownika z wykorzystaniem **React**, **Next.js** i **Tailwind CSS**.
+- **Mikroserwisy**: Projektowanie systemów rozproszonych z wykorzystaniem **MassTransit**, **RabbitMQ** i **Kafka**.
+- **Architektura**: Stosowanie wzorców takich jak **CQRS**, **Event Sourcing** i **Clean Architecture**, aby zapewnić wydajność i łatwość utrzymania naszych systemów.
+- **Chmura & DevOps**: Wdrażanie aplikacji natywnych dla chmury z wykorzystaniem **Kubernetes**, **Docker**, **Azure**, **AWS**, oraz narzędzi do zarządzania infrastrukturą jak kod, takich jak **Terraform**.
 
-- **.NET Core** do tworzenia solidnego zaplecza naszych rozwiązań.
-- **React** i **Next.js** do szybkich, interaktywnych i pięknych interfejsów użytkownika.
-- **Tailwind CSS** dla responsywnych i estetycznych projektów frontendowych.
+### 💡 Nasze kluczowe kompetencje
+- **Mikroserwisy i komunikacja**: Pomagamy firmom przejść od systemów monolitycznych do nowoczesnych, skalowalnych mikroserwisów.
+- **Tworzenie API**: Budujemy bezpieczne, szybkie i elastyczne API z wykorzystaniem zasad **REST** i **GraphQL**.
+- **Dane i monitorowanie**: Korzystamy z narzędzi takich jak **ElasticSearch**, **Redis**, **Prometheus** i **Grafana** do przetwarzania danych, buforowania oraz monitorowania kondycji systemów.
+- **AI/ML**: Badamy zastosowania sztucznej inteligencji i uczenia maszynowego, aby pomóc naszym klientom zdobyć lepszy wgląd i ulepszyć podejmowanie decyzji.
 
-### ⚙️ **Mikroserwisy i systemy rozproszone**
-Pomagamy firmom przechodzić z monolitycznych architektur na **mikroserwisy**, co zapewnia większą elastyczność i skalowalność. Nasza wiedza obejmuje:
+### 📊 Statystyki GitHub:
+![ITEON's GitHub Stats](https://github-readme-stats.vercel.app/api?username=ITEONpl&show_icons=true&theme=radical)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ITEONpl&layout=compact&theme=radical)](https://github.com/ITEONpl/github-readme-stats)
 
-- **MassTransit** i **RabbitMQ** do obsługi komunikatów i systemów opartych na zdarzeniach.
-- Wzorzec **Outbox**, który gwarantuje niezawodne dostarczanie wiadomości.
-- **CQRS** (Command Query Responsibility Segregation) i **Event Sourcing** do optymalizacji wydajności i skalowalności.
+### 🔗 Znajdź nas:
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/leszekszpunar/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ITEONpl)
 
-### ☁️ **Chmura i konteneryzacja**
-Budujemy aplikacje natywne dla chmury, które wdrażamy i zarządzamy nimi z użyciem:
-
-- **Kubernetes** do orkiestracji i **Docker** do konteneryzacji.
-- Nasza specjalizacja obejmuje **Azure** oraz **AWS** jako platformy chmurowe.
-- **Terraform** do zarządzania infrastrukturą jako kod, zapewniającą skalowalne i bezpieczne wdrożenia.
-
-### 🛠️ **Architektura na najwyższym poziomie**
-Dbamy o to, aby nasze oprogramowanie było trwałe, stosując najlepsze praktyki projektowe:
-
-- **Clean Architecture** i **Domain-Driven Design** (DDD), co pozwala na tworzenie aplikacji zgodnych z celami biznesowymi.
-- Zasady **SOLID**, które ułatwiają utrzymanie i rozwój kodu.
-- **TDD** (Test-Driven Development), aby zapewnić niezawodność od samego początku.
-
-### 🔒 **Bezpieczne i szybkie API**
-Projektujemy i utrzymujemy API, które są szybkie, bezpieczne i łatwe do integracji:
-
-- **RESTful API** do prostych i skalowalnych usług.
-- **GraphQL** dla bardziej elastycznych i efektywnych zapytań o dane.
-- **OAuth** i **OpenID Connect** dla bezpiecznej autoryzacji i uwierzytelniania.
-- Komunikacja w czasie rzeczywistym przy użyciu **WebSockets**.
-
-### 🔍 **Dane i monitorowanie**
-Dla aplikacji wymagających intensywnego przetwarzania danych korzystamy z:
-
-- **ElasticSearch** do szybkiego i elastycznego wyszukiwania oraz analizy.
-- **Redis** jako pamięci podręcznej i bazy danych w pamięci.
-- **Prometheus** i **Grafana** do monitorowania stanu systemu i śledzenia kluczowych wskaźników.
-
-### 🤖 **Sztuczna inteligencja i uczenie maszynowe**
-Badamy technologie **AI/ML**, aby wspomagać podejmowanie decyzji oraz automatyzować procesy, co pozwala naszym klientom zyskać lepszy wgląd i poprawić efektywność.
-
-## 🔗 Nasze podejście
-Tworzymy **modularne, testowalne i łatwe w utrzymaniu** oprogramowanie, które ewoluuje wraz z rozwojem Twojego biznesu. Dzięki stosowaniu praktyk **CI/CD** oraz przestrzeganiu zasad **Conventional Commits** i **Semantic Versioning**, każda wersja jest przewidywalna i łatwa do wdrożenia.
-
-## 🤝 Współpraca
-Jeśli szukasz partnera, który rozumie zarówno **wyzwania biznesowe**, jak i **złożoność techniczną**, jesteśmy do Twojej dyspozycji! Blisko współpracujemy z naszymi klientami, aby dostarczać rozwiązania, które nie tylko spełniają bieżące potrzeby, ale także skalują się na przyszłość.
+### 🚀 Współpraca
+Blisko współpracujemy z naszymi klientami, aby zrozumieć zarówno **wyzwania biznesowe**, jak i **wymagania techniczne**. Jeśli potrzebujesz dostosowanego rozwiązania programistycznego, architektury mikroserwisowej, lub wdrożenia w chmurze, jesteśmy tutaj, aby pomóc. Skontaktuj się z nami już dziś, aby omówić, jak możemy współpracować!
 
 - 📧 Email: info@iteon.pl
 - 🌍 Strona: [iteon.pl](http://iteon.pl)
 - 🏢 Adres: ul. Szamocka 12/136, 01-748 Warszawa, Polska
-
-Dziękujemy za odwiedziny i zapraszamy do współpracy! 🚀
-
