@@ -24,8 +24,7 @@ At ITEON.PL, we create high-performance applications tailored to solve real-worl
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ITEONpl&layout=compact&theme=radical)](https://github.com/ITEONpl/github-readme-stats)
 
 ### 🔗 Find Us Here:
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/leszekszpunar/)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ITEONpl)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/80040982/admin/dashboard/)
 
 ### 🚀 Let's Work Together!
 We work closely with our clients to understand both the **business challenges** and **technical requirements**. Whether you need a tailored software solution, microservices architecture, or cloud deployment, we are here to help. Contact us today to explore how we can work together!
@@ -34,20 +33,11 @@ We work closely with our clients to understand both the **business challenges** 
 - 🌍 Website: [iteon.pl](http://iteon.pl)
 - 🏢 Address: ul. Szamocka 12/136, 01-748 Warsaw, Poland
 
-### 📊 GitHub Stats:
-
-![ITEON's GitHub Stats](https://github-readme-stats.vercel.app/api?username=ITEONpl&show_icons=true&theme=radical)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ITEONpl&layout=compact&theme=radical)](https://github.com/ITEONpl/github-readme-stats)
-
-### 🏆 GitHub Trophies:
-
-[![trophy](https://github-profile-trophy.vercel.app/?username=ITEONpl&theme=onedark)](https://github.com/ITEONpl/github-profile-trophy)
-
 ---
 
 ## Wersja Polska 🇵🇱
 
-Jesteśmy firmą **ITEON.PL**, dynamicznie rozwijającą się firmą programistyczną, zarządzaną przez **Leszka Szpunara** i mającą siedzibę w Warszawie. Od 2009 roku wspieramy firmy w rozwoju poprzez dostarczanie innowacyjnych, skalowalnych i wydajnych rozwiązań cyfrowych. Skupiamy się na budowaniu systemów, które łączą doskonałość techniczną z wglądem w potrzeby biznesowe.
+Jesteśmy firmą **ITEON.PL**, dynamicznie rozwijającą się spółką programistyczną, zarządzaną przez **Leszka Szpunara** i mającą siedzibę w Warszawie. Od 2009 roku wspieramy firmy w rozwoju poprzez dostarczanie innowacyjnych, skalowalnych i wydajnych rozwiązań cyfrowych. Skupiamy się na budowaniu systemów, które łączą doskonałość techniczną z wglądem w potrzeby biznesowe.
 
 ### 🌟 Czym się zajmujemy
 W ITEON.PL tworzymy aplikacje o wysokiej wydajności, dostosowane do rozwiązywania rzeczywistych problemów biznesowych. Nasze główne obszary działalności to:
@@ -69,8 +59,7 @@ W ITEON.PL tworzymy aplikacje o wysokiej wydajności, dostosowane do rozwiązywa
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ITEONpl&layout=compact&theme=radical)](https://github.com/ITEONpl/github-readme-stats)
 
 ### 🔗 Znajdź nas:
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/leszekszpunar/)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ITEONpl)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/80040982/admin/dashboard/)
 
 ### 🚀 Współpraca
 Blisko współpracujemy z naszymi klientami, aby zrozumieć zarówno **wyzwania biznesowe**, jak i **wymagania techniczne**. Jeśli potrzebujesz dostosowanego rozwiązania programistycznego, architektury mikroserwisowej, lub wdrożenia w chmurze, jesteśmy tutaj, aby pomóc. Skontaktuj się z nami już dziś, aby omówić, jak możemy współpracować!
