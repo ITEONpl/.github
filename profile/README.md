@@ -19,12 +19,8 @@ At ITEON.PL, we create high-performance applications tailored to solve real-worl
 - **Data & Monitoring**: Using **ElasticSearch**, **Redis**, **Prometheus**, and **Grafana** for data handling, caching, and monitoring system health.
 - **AI/ML**: Exploring Artificial Intelligence and Machine Learning to help clients gain deeper insights and enhance decision-making.
 
-### 📊 GitHub Stats:
-![ITEON's GitHub Stats](https://github-readme-stats.vercel.app/api?username=ITEONpl&show_icons=true&theme=radical)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ITEONpl&layout=compact&theme=radical)](https://github.com/ITEONpl/github-readme-stats)
-
 ### 🔗 Find Us Here:
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/80040982/admin/dashboard/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/80040982)
 
 ### 🚀 Let's Work Together!
 We work closely with our clients to understand both the **business challenges** and **technical requirements**. Whether you need a tailored software solution, microservices architecture, or cloud deployment, we are here to help. Contact us today to explore how we can work together!
@@ -54,12 +50,8 @@ W ITEON.PL tworzymy aplikacje o wysokiej wydajności, dostosowane do rozwiązywa
 - **Dane i monitorowanie**: Korzystamy z narzędzi takich jak **ElasticSearch**, **Redis**, **Prometheus** i **Grafana** do przetwarzania danych, buforowania oraz monitorowania kondycji systemów.
 - **AI/ML**: Badamy zastosowania sztucznej inteligencji i uczenia maszynowego, aby pomóc naszym klientom zdobyć lepszy wgląd i ulepszyć podejmowanie decyzji.
 
-### 📊 Statystyki GitHub:
-![ITEON's GitHub Stats](https://github-readme-stats.vercel.app/api?username=ITEONpl&show_icons=true&theme=radical)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ITEONpl&layout=compact&theme=radical)](https://github.com/ITEONpl/github-readme-stats)
-
 ### 🔗 Znajdź nas:
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/80040982/admin/dashboard/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/80040982)
 
 ### 🚀 Współpraca
 Blisko współpracujemy z naszymi klientami, aby zrozumieć zarówno **wyzwania biznesowe**, jak i **wymagania techniczne**. Jeśli potrzebujesz dostosowanego rozwiązania programistycznego, architektury mikroserwisowej, lub wdrożenia w chmurze, jesteśmy tutaj, aby pomóc. Skontaktuj się z nami już dziś, aby omówić, jak możemy współpracować!
