@@ -1,0 +1,50 @@
+name: 'Notify on Release'
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  notify_on_release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set environment variables
+        run: |
+          echo "RELEASE_DATE=$(date -u +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+          echo "RELEASE_VERSION=${{ github.event.release.tag_name }}" >> $GITHUB_ENV
+          echo "RELEASE_URL=${{ github.event.release.html_url }}" >> $GITHUB_ENV
+          echo "RELEASE_NOTES=${{ github.event.release.body || 'No release notes available.' }}" >> $GITHUB_ENV
+
+      - name: Get Pull Request Link (if any)
+        id: get_pr
+        run: |
+          PR_URL=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/commits/${{ github.sha }}/pulls" | jq -r '.[0].html_url')
+          if [ -n "$PR_URL" ]; then
+            echo "PR_URL=$PR_URL" >> $GITHUB_ENV
+          else
+            echo "PR_URL=None" >> $GITHUB_ENV
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Send Slack and Discord Notification
+        uses: hunghg255/action-notifications@master
+        with:
+          slack_webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          discord_webhook: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          title: ":tada: **New Release Published**"
+          description: |
+            **Version:** ${{ env.RELEASE_VERSION }}
+            **Release Date:** ${{ env.RELEASE_DATE }}
+            **Commit:** [${{ github.sha }}](${{
+              github.server_url }}/${{
+              github.repository }}/commit/${{ github.sha }})
+            **Pull Request (if available):** ${{ env.PR_URL }}
+            **Release URL:** [View Release](${{ env.RELEASE_URL }})
+            **Release Notes:** ${{ env.RELEASE_NOTES }}
+          status: success

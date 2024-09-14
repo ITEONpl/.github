@@ -1,0 +1,48 @@
+name: 'Notify on New Tag'
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  notify_on_tag:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set environment variables
+        run: |
+          echo "TAG_DATE=$(date -u +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
+          echo "TAG_NAME=${{ github.ref_name }}" >> $GITHUB_ENV
+          echo "COMMIT_SHA=${{ github.sha }}" >> $GITHUB_ENV
+
+      - name: Get Pull Request Link (if any)
+        id: get_pr
+        run: |
+          PR_URL=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/commits/${{ github.sha }}/pulls" | jq -r '.[0].html_url')
+          if [ -n "$PR_URL" ]; then
+            echo "PR_URL=$PR_URL" >> $GITHUB_ENV
+          else
+            echo "PR_URL=None" >> $GITHUB_ENV
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Send Slack and Discord Notification
+        uses: hunghg255/action-notifications@master
+        with:
+          slack_webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          discord_webhook: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          title: ":bookmark: **New Tag Created**"
+          description: |
+            **Tag Name:** ${{ env.TAG_NAME }}
+            **Tag Date:** ${{ env.TAG_DATE }}
+            **Commit:** [${{ github.sha }}](${{
+              github.server_url }}/${{
+              github.repository }}/commit/${{ github.sha }})
+            **Pull Request (if available):** ${{ env.PR_URL }}
+          status: success

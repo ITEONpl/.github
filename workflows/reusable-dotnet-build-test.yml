@@ -1,0 +1,78 @@
+name: 'Build and Test'
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --no-restore --configuration Release
+
+      - name: Test
+        run: dotnet test --no-build --verbosity normal
+
+      # Notify on failure with detailed information
+      - name: Send Failure Notification on Slack and Discord
+        if: failure()
+        uses: hunghg255/action-notifications@master
+        with:
+          slack_webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          discord_webhook: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          title: ":x: **Build/Test Failed**"
+          description: |
+            **Repository:** ${{ github.repository }}
+            **Branch:** ${{ github.ref }}
+            **Commit:** [${{ github.sha }}](${{
+              github.server_url }}/${{
+              github.repository }}/commit/${{ github.sha }})
+            **Workflow:** ${{ github.workflow }}
+            **Run ID:** ${{ github.run_id }}
+            **Logs:** [View Logs](${{
+              github.server_url }}/${{
+              github.repository }}/actions/runs/${{
+              github.run_id }}/logs)
+            **Error Logs:** Check the logs for details on the failure.
+          status: failure
+
+      # Notify on success with detailed information
+      - name: Send Success Notification on Slack and Discord
+        if: success()
+        uses: hunghg255/action-notifications@master
+        with:
+          slack_webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          discord_webhook: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          title: ":white_check_mark: **Build/Test Successful**"
+          description: |
+            **Repository:** ${{ github.repository }}
+            **Branch:** ${{ github.ref }}
+            **Commit:** [${{ github.sha }}](${{
+              github.server_url }}/${{
+              github.repository }}/commit/${{ github.sha }})
+            **Workflow:** ${{ github.workflow }}
+            **Run ID:** ${{ github.run_id }}
+            **Logs:** [View Logs](${{
+              github.server_url }}/${{
+              github.repository }}/actions/runs/${{
+              github.run_id }}/logs)
+          status: success
