@@ -1,0 +1,99 @@
+name: Pull Request Validation
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+      - release/*
+    types: [opened, synchronize, reopened]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install GitHub CLI
+        run: sudo apt-get install gh
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+
+      - name: Restore NuGet packages
+        run: dotnet restore
+
+      - name: Install npm dependencies
+        run: npm install
+
+      - name: Run Tests
+        id: test
+        run: dotnet test --no-restore --verbosity normal
+
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/node@master
+        continue-on-error: true
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
+      - name: Build application
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Check Pull Request Status
+        id: check_pr
+        run: |
+          PR_NUMBER=${{ github.event.pull_request.number }}
+          # List workflow runs for the current pull request
+          WORKFLOW_RUNS=$(gh run list --json status,conclusion,name,url --jq '.[] | select(.head_branch == "${{ github.head_ref }}") | "\(.status) \(.conclusion): \(.name) - \(.url)"')
+          echo "$WORKFLOW_RUNS"
+          
+          # Initialize a variable to hold failed checks
+          FAILED_CHECKS=""
+          
+          # Check for failed runs
+          while IFS= read -r line; do
+            if [[ $line == *"failure"* ]]; then
+              FAILED_CHECKS+="$line"$'\n'
+            fi
+          done <<< "$WORKFLOW_RUNS"
+          
+          # Write failed checks to environment file
+          echo "FAILED_CHECKS=$FAILED_CHECKS" >> $GITHUB_ENV
+          
+          if [[ -n "$FAILED_CHECKS" ]]; then
+            echo "Failed checks detected:"
+            echo "$FAILED_CHECKS"
+            exit 1
+          else
+            echo "All checks passed."
+            echo "FAILED_CHECKS=" >> $GITHUB_ENV
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Notify on Slack and Discord (if needed)
+        if: env.FAILED_CHECKS != ''
+        uses: hunghg255/action-notifications@master
+        with:
+          slack_webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          discord_webhook: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          title: '❌ **Pull Request Validation Failed**'
+          description: |
+            *Pull Request:* [${{ github.event.pull_request.html_url }}](${{ github.event.pull_request.html_url }})
+            *Repository:* **${{ github.repository }}**
+            *Branch:* ${{ github.head_ref }}
+            *Workflow:* ${{ github.workflow }}
+            *Failed Checks:*
+              ${{ env.FAILED_CHECKS }}
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}

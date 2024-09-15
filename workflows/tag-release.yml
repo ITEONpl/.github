@@ -1,0 +1,30 @@
+name: Tag Release
+
+on:
+  push:
+    branches:
+      - main
+      - release/*
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Bump version and push tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          npm version patch -m "chore(release): %s"
+          git push origin main --tags

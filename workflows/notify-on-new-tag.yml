@@ -22,7 +22,7 @@ jobs:
       - name: Get Pull Request Link (if any)
         id: get_pr
         run: |
-          PR_URL=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          PR_URL=$(curl -s -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
             "https://api.github.com/repos/${{ github.repository }}/commits/${{ github.sha }}/pulls" | jq -r '.[0].html_url')
           if [ -n "$PR_URL" ]; then
             echo "PR_URL=$PR_URL" >> $GITHUB_ENV
@@ -30,7 +30,7 @@ jobs:
             echo "PR_URL=None" >> $GITHUB_ENV
           fi
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Send Slack and Discord Notification
         uses: hunghg255/action-notifications@master
@@ -41,8 +41,6 @@ jobs:
           description: |
             **Tag Name:** ${{ env.TAG_NAME }}
             **Tag Date:** ${{ env.TAG_DATE }}
-            **Commit:** [${{ github.sha }}](${{
-              github.server_url }}/${{
-              github.repository }}/commit/${{ github.sha }})
+            **Commit:** [${{ github.sha }}](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }})
             **Pull Request (if available):** ${{ env.PR_URL }}
           status: success

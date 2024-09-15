@@ -1,0 +1,87 @@
+name: 'Build and Test'
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - release/*
+  pull_request:
+    branches:
+      - main
+      - develop
+      - release/*
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Install npm dependencies
+        run: npm install
+
+      - name: Build
+        run: dotnet build --no-restore --configuration Release
+
+      - name: Test
+        run: dotnet test --no-build --verbosity normal
+
+      - name: Run ESLint
+        run: npx eslint . --ext .js,.jsx,.ts,.tsx
+
+      - name: Run dotnet format
+        run: dotnet format --verify-no-changes
+
+      # Powiadomienia pozostają bez zmian
+      - name: Send Failure Notification on Slack and Discord
+        if: failure()
+        uses: hunghg255/action-notifications@master
+        with:
+          slack_webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          discord_webhook: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          title: ":x: **Build/Test Failed**"
+          description: |
+            **Repository:** ${{ github.repository }}
+            **Branch:** ${{ github.ref }}
+            **Commit:** [${{ github.sha }}](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }})
+            **Workflow:** ${{ github.workflow }}
+            **Run ID:** ${{ github.run_id }}
+            **Logs:** [View Logs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}/logs)
+            **Error Logs:** Check the logs for details on the failure.
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+
+      - name: Send Success Notification on Slack and Discord
+        if: success()
+        uses: hunghg255/action-notifications@master
+        with:
+          slack_webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          discord_webhook: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          title: ":white_check_mark: **Build/Test Successful**"
+          description: |
+            **Repository:** ${{ github.repository }}
+            **Branch:** ${{ github.ref }}
+            **Commit:** [${{ github.sha }}](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }})
+            **Workflow:** ${{ github.workflow }}
+            **Run ID:** ${{ github.run_id }}
+            **Logs:** [View Logs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}/logs)
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
